@@ -8,6 +8,8 @@ public class Post
     public IEnumerable<Account>? Like { get; set; }
     public DateTime PublishDateTime { get; set; }
 
-    public int AccountId { get; set; }
+    public Guid AccountId { get; set; }
     public Account? Account { get; set; }
+
+    public IEnumerable<Comment> Comments { get; set; }
 }
