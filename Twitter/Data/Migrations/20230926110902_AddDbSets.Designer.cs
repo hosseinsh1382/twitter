@@ -4,11 +4,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Twiiter.Data;
+using Twitter.Data;
+using Twitter.Data;
 
 #nullable disable
 
-namespace Twiiter.Migrations
+namespace Twitter.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20230926110902_AddDbSets")]

@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Twiiter.Migrations
+namespace Twitter.Migrations
 {
     /// <inheritdoc />
     public partial class InitialSetup : Migration

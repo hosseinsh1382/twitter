@@ -10,6 +10,6 @@ public class Account
     public string Email { get; set; }
     public string? Biography { get; set; }
     public DateTime JoinedDate { get; set; }
-    public List<Account>? Following { get; set; }
-    public List<Account>? Follower { get; set; }
+    public IEnumerable<Account> Following { get; set; } = Enumerable.Empty<Account>();
+    public IEnumerable<Account> Follower { get; set; } = Enumerable.Empty<Account>();
 }

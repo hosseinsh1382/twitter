@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Twitter.Models;
 
-namespace Twiiter.Data;
+namespace Twitter.Data;
 
 public class ApplicationDbContext : DbContext
 {

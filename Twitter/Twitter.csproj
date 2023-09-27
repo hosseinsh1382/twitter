@@ -4,7 +4,7 @@
         <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
-        <RootNamespace>Twiiter</RootNamespace>
+        <RootNamespace>Twitter</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -17,6 +17,14 @@
         </PackageReference>
         <PackageReference Include="MySql.EntityFrameworkCore" Version="7.0.5" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
+
+
+
+
+
+
+
+
     </ItemGroup>
 
 
