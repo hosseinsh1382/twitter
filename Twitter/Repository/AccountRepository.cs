@@ -7,19 +7,21 @@ namespace Twitter.Repository;
 
 public class AccountRepository : IAccountRepository
 {
-    private ApplicationDbContext _dbContext;
+    private readonly ApplicationDbContext _dbContext;
+    private readonly Mapper _mapper;
 
-    public AccountRepository(ApplicationDbContext dbContext)
+    public AccountRepository(ApplicationDbContext dbContext, Mapper mapper)
     {
         _dbContext = dbContext;
+        _mapper = mapper;
     }
 
-    public SignUpRespond SignUp(SignUpRequest accountDto)
+    public SignUpResponse SignUp(SignUpRequest accountDto)
     {
-        var account = Mapper.MapSignUpRequestToAccount(accountDto);
+        var account = _mapper.MapSignUpRequestToAccount(accountDto);
         _dbContext.Accounts.Add(account);
         _dbContext.SaveChanges();
-        return Mapper.MapAccountToSignUpRespond(account);
+        return _mapper.MapAccountToSignUpRespond(account);
     }
 
     public IEnumerable<AllAccountDto> GetAll()
@@ -34,12 +36,12 @@ public class AccountRepository : IAccountRepository
 
     public AccountDto GetByUsername(string username)
     {
-        return Mapper.MapAccountToAccountDto(_dbContext.Accounts.SingleOrDefault(account => account.Username == username));
+        return _mapper.MapAccountToAccountDto(_dbContext.Accounts.SingleOrDefault(account => account.Username == username));
     }
 
     public AccountDto GetById(Guid id)
     {
-        return Mapper.MapAccountToAccountDto(_dbContext.Accounts.SingleOrDefault(account => account.Id == id));
+        return _mapper.MapAccountToAccountDto(_dbContext.Accounts.SingleOrDefault(account => account.Id == id));
     }
 
     public bool Update(Guid id, SignUpRequest account)
@@ -64,7 +66,7 @@ public class AccountRepository : IAccountRepository
     public bool Delete(Guid id)
     {
         var account = _dbContext.Accounts.SingleOrDefault(account => account.Id == id);
-        if (account==null)
+        if (account is null)
         {
             return false;
         }

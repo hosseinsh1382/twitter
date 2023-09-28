@@ -8,8 +8,8 @@ public class Account
     public string Password { get; set; }
     public string? Fullname { get; set; }
     public string Email { get; set; }
-    public string? Biography { get; set; }
-    public DateTime JoinedDate { get; set; }
+    public string Biography { get; set; } = string.Empty;
+    public DateTime JoinedDate { get; init; } = DateTime.Now; 
     public IEnumerable<Account> Following { get; set; } = Enumerable.Empty<Account>();
     public IEnumerable<Account> Follower { get; set; } = Enumerable.Empty<Account>();
 }

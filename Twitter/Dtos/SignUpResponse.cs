@@ -1,6 +1,6 @@
 ﻿namespace Twitter.Dtos;
 
-public class SignUpRespond
+public class SignUpResponse
 {
     public string Username { get; set; }
     public string? Fullname { get; set; }
