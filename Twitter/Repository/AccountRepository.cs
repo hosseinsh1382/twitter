@@ -8,9 +8,9 @@ namespace Twitter.Repository;
 public class AccountRepository : IAccountRepository
 {
     private readonly ApplicationDbContext _dbContext;
-    private readonly Mapper _mapper;
+    private readonly IMapper _mapper;
 
-    public AccountRepository(ApplicationDbContext dbContext, Mapper mapper)
+    public AccountRepository(ApplicationDbContext dbContext, IMapper mapper)
     {
         _dbContext = dbContext;
         _mapper = mapper;

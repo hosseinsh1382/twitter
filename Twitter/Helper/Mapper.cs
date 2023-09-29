@@ -1,10 +1,12 @@
 ﻿using Twitter.Dtos;
+using Twitter.Interfaces;
 using Twitter.Models;
 
 namespace Twitter.Helper;
 
-public class Mapper
+public class Mapper:IMapper
 {
+
     public Account MapSignUpRequestToAccount(SignUpRequest accountDto)
     {
         return new Account
@@ -55,7 +57,7 @@ public class Mapper
         };
     }
 
-    public static PostResponse MapPostToPostResponse(Post post)
+    public  PostResponse MapPostToPostResponse(Post post)
     {
         return new PostResponse
         {
@@ -68,7 +70,7 @@ public class Mapper
         };
     }
 
-    public static IEnumerable<PostResponse> MapAllPostToPostResponse(IEnumerable<Post> posts)
+    public  IEnumerable<PostResponse> MapAllPostToPostResponse(IEnumerable<Post> posts)
     {
         return posts.Select(post => new PostResponse
         {

@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Twitter.Data;
+using Twitter.Helper;
 using Twitter.Interfaces;
 using Twitter.Repository;
 
@@ -13,7 +14,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ApplicationDbContext>(option =>
     option.UseMySQL("server=localhost;database=twitter;user=root;password=;"));
-builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+builder.Services.AddTransient<IAccountRepository, AccountRepository>();
+builder.Services.AddTransient<IPostRepository, PostRepository>();
+builder.Services.AddTransient<IMapper, Mapper>();
+
 
 var app = builder.Build();
 
