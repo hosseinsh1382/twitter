@@ -16,13 +16,7 @@ public class AccountRepository : IAccountRepository
         _mapper = mapper;
     }
 
-    public SignUpResponse SignUp(SignUpRequest accountDto)
-    {
-        var account = _mapper.MapSignUpRequestToAccount(accountDto);
-        _dbContext.Accounts.Add(account);
-        _dbContext.SaveChanges();
-        return _mapper.MapAccountToSignUpRespond(account);
-    }
+    
 
     public IEnumerable<AllAccountDto> GetAll()
     {

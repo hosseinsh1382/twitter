@@ -2,9 +2,11 @@
 
 public class SignUpResponse
 {
-    public string Username { get; set; }
-    public string? Fullname { get; set; }
-    public string Email { get; set; }
-    public string AccountName { get; set; }
-    public DateTime JoinedDate { get; set; }
+    public string Username { get; init; }
+    public string? Fullname { get; init; }
+    public string Email { get; init; }
+    public string AccountName { get; init; }
+    public DateTime JoinedDate { get; init; }
+
+    public string Message { get; init; } = string.Empty;
 }

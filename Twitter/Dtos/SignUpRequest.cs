@@ -2,10 +2,10 @@
 
 public class SignUpRequest
 {
-    public string AccountName { get; set; }
-    public string Username { get; set; }
-    public string Password { get; set; }
-    public string? Fullname { get; set; }
-    public string Email { get; set; }
-    public string? Biography { get; set; }
+    public string AccountName { get; init; }
+    public string Username { get; init; }
+    public string Password { get; init; }
+    public string? Fullname { get; init; }
+    public string Email { get; init; }
+    public string? Biography { get; init; }
 }

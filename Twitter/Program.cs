@@ -16,7 +16,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(option =>
     option.UseMySQL("server=localhost;database=twitter;user=root;password=;"));
 builder.Services.AddTransient<IAccountRepository, AccountRepository>();
 builder.Services.AddTransient<IPostRepository, PostRepository>();
-builder.Services.AddTransient<IMapper, Mapper>();
+builder.Services.AddTransient<IIdentityRepository, IdentityRepository>();
+builder.Services.AddSingleton<IMapper, Mapper>();
 
 
 var app = builder.Build();

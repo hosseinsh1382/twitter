@@ -37,7 +37,7 @@ public class AccountController : Microsoft.AspNetCore.Mvc.Controller
             : Ok(_repository.GetByUsername(username));
     }
 
-    [HttpPost("{id}")]
+    [HttpPut("{id}")]
     public ActionResult Update(Guid id, [FromBody] SignUpRequest account)
     {
         return _repository.Update(id, account) == false
