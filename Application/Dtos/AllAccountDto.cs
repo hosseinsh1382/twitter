@@ -1,4 +1,4 @@
-﻿namespace Twitter.Dtos;
+﻿namespace Presentation.Dtos;
 
 public record AllAccountDto
 {

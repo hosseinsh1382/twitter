@@ -1,8 +1,9 @@
-﻿using Twitter.Dtos;
-using Twitter.Interfaces;
+﻿using Presentation.Dtos;
+using Presentation.Interfaces;
+using Presentation.Models;
 using Twitter.Models;
 
-namespace Twitter.Helper;
+namespace Presentation.Helper;
 
 public class Mapper:IMapper
 {

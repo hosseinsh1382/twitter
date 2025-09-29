@@ -1,6 +1,6 @@
-﻿using Twitter.Dtos;
+﻿using Presentation.Dtos;
 
-namespace Twitter.Interfaces;
+namespace Presentation.Interfaces;
 
 public interface IAccountRepository
 {

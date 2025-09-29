@@ -1,4 +1,4 @@
-﻿namespace Twitter.Helper;
+﻿namespace Presentation.Helper;
 
 public class Constants
 {

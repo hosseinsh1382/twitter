@@ -1,4 +1,4 @@
-﻿namespace Twitter.Dtos;
+﻿namespace Presentation.Dtos;
 
 public class SignUpResponse
 {

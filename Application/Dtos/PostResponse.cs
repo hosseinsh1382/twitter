@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Twitter.Models;
+using Presentation.Models;
 
-namespace Twitter.Dtos;
+namespace Presentation.Dtos;
 
 public record PostResponse
 {
