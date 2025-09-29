@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using Twitter.Data;
-using Twitter.Helper;
-using Twitter.Interfaces;
-using Twitter.Repository;
+using Presentation.Data;
+using Presentation.Helper;
+using Presentation.Interfaces;
+using Presentation.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 

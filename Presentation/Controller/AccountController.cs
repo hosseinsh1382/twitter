@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Twitter.Dtos;
-using Twitter.Interfaces;
+using Presentation.Dtos;
+using Presentation.Interfaces;
 
-namespace Twitter.Controller;
+namespace Presentation.Controller;
 
 [ApiController]
 [Route("api/[controller]")]
