@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Twitter.Data;
-using Twitter.Dtos;
-using Twitter.Interfaces;
+using Presentation.Data;
+using Presentation.Dtos;
+using Presentation.Interfaces;
 
-namespace Twitter.Repository;
+namespace Presentation.Repository;
 
 public class PostRepository : IPostRepository
 {

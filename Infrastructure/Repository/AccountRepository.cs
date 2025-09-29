@@ -1,9 +1,9 @@
-﻿using Twitter.Helper;
-using Twitter.Data;
-using Twitter.Dtos;
-using Twitter.Interfaces;
+﻿using Presentation.Data;
+using Presentation.Dtos;
+using Presentation.Interfaces;
+using Presentation.Helper;
 
-namespace Twitter.Repository;
+namespace Presentation.Repository;
 
 public class AccountRepository : IAccountRepository
 {
